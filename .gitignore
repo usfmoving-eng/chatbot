@@ -1,0 +1,108 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables - CRITICAL: Never commit these!
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+
+# Docker volumes (local data)
+docker-compose.override.yml
+.dockerignore.local
+
+# Audio uploads (if stored locally)
+uploads/
+audio_files/
+
+# Google Sheets credentials (if stored as file)
+google-credentials.json
+service-account.json
+*-credentials.json
+
+# Backups
+*.backup
+*.bak
+backup/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Secret files
+secrets/
+*.key
+*.pem
+*.p12
+.secrets
+
+# CI/CD local configs
+.gitlab-ci.local.yml
+.github/workflows/*.local.yml
