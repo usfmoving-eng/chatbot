@@ -42,8 +42,26 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Enable CORS for WordPress integration
-socketio = SocketIO(app, cors_allowed_origins="*") if SOCKETIO_AVAILABLE else None
+# Enable CORS specifically for WordPress site
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "https://www.usfhoustonmoving.com",
+            "https://usfhoustonmoving.com",
+            "http://www.usfhoustonmoving.com",  # Fallback for HTTP
+            "http://usfhoustonmoving.com"       # Fallback for HTTP
+        ],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"],
+        "supports_credentials": True
+    }
+})
+socketio = SocketIO(app, cors_allowed_origins=[
+    "https://www.usfhoustonmoving.com",
+    "https://usfhoustonmoving.com",
+    "http://www.usfhoustonmoving.com",
+    "http://usfhoustonmoving.com"
+]) if SOCKETIO_AVAILABLE else None
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
